@@ -20,6 +20,7 @@
   },
   "rules": {
     "@typescript-eslint/no-namespace": "off",
-    "vue/multi-word-component-names": "off"
+    "vue/multi-word-component-names": "off",
+    "eol-last": ["error", "always"]
   }
 }
