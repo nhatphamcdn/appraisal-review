@@ -1,0 +1,12 @@
+$fm-primary: "Montserrat", sans-serif;
+$dark: #081131;
+$hot-pink: #f81894;
+$hot-pink-hover: #ff69b4;
+
+:root {
+  --fs-font-family: #{$fm-primary};
+  --body-color: #{$dark};
+  --fs-primary: #{$hot-pink};
+  --fs-primary-hover: #{$hot-pink-hover};
+  --fs-primary-focus: #{$hot-pink-hover};
+}

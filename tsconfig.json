@@ -1,4 +1,10 @@
 {
   // https://v3.nuxtjs.org/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  // Preserve type checking in SFC templates, see https://github.com/johnsoncodehk/volar/issues/1219#issuecomment-1104548432
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "types": ["vite/client"],
+    "jsx": "preserve"
+  }
 }
