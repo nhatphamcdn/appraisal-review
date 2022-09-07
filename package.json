@@ -18,6 +18,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@nhatphamfks-org/funstyle": "^1.0.1",
     "@types/node": "^18.7.15",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
@@ -31,6 +32,8 @@
     "lint-staged": "^13.0.3",
     "npm-run-all": "^4.1.5",
     "nuxt": "3.0.0-rc.9",
+    "sass": "^1.54.8",
+    "vite-svg-loader": "^3.6.0",
     "vue-eslint-parser": "^9.0.3",
     "vue-tsc": "^0.40.8"
   },
