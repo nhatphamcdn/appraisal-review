@@ -19,7 +19,8 @@
     "test:ui": "npm-run-all postinstall && TZ=UTC vitest --ui",
     "story:dev": "histoire dev",
     "story:build": "histoire build",
-    "story:preview": "histoire preview"
+    "story:preview": "histoire preview",
+    "storybook": "start-storybook -p 6006"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -27,6 +28,9 @@
     "@histoire/plugin-nuxt": "^0.10.7",
     "@histoire/plugin-vue": "^0.10.7",
     "@nhatphamfks-org/funstyle": "^1.0.1",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/builder-vite": "^0.2.2",
+    "@storybook/vue3": "^6.5.10",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/vue": "^6.6.1",
     "@types/node": "^18.7.15",
