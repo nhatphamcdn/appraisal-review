@@ -20,6 +20,9 @@ jobs:
       - name: Lint checking
         run: npm run lint
       
+      - name: Components testing
+        run: npm run test
+
       - name: Source building
         run: npm run build
   notify-pull-request:
