@@ -16,11 +16,16 @@
     "lint:style": "eslint .",
     "test": "npm-run-all postinstall && TZ=UTC vitest --run",
     "test:watch": "npm-run-all postinstall && TZ=UTC vitest",
-    "test:ui": "npm-run-all postinstall && TZ=UTC vitest --ui"
+    "test:ui": "npm-run-all postinstall && TZ=UTC vitest --ui",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@histoire/plugin-nuxt": "^0.10.7",
+    "@histoire/plugin-vue": "^0.10.7",
     "@nhatphamfks-org/funstyle": "^1.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/vue": "^6.6.1",
@@ -36,6 +41,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.4.0",
+    "histoire": "^0.10.7",
     "husky": "^8.0.1",
     "jsdom": "^20.0.0",
     "lint-staged": "^13.0.3",

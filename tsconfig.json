@@ -5,5 +5,5 @@
   "exclude": ["node_modules"],
   "compilerOptions": {
     "types": ["vite/client", "@types/testing-library__jest-dom"],
-  }
+  },
 }

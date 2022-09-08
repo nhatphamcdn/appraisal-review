@@ -9,8 +9,6 @@ const rq = (p: string) => resolve(__dirname, p);
 const alias: Record<string, string> = {
   "~": rq("."),
   "@": rq("."),
-  assets: rq("./assets"),
-  public: rq("./public"),
 };
 
 const include = [/\.vue$/, /\.vue\?vue/, /\.stories\.ts$/, /\.[tj]s$/];
