@@ -4,7 +4,7 @@
 interface ICardCotnainerProps {
   boxShadow?: boolean;
   backgroundColor?: string;
-  borderRadius?: string | number;
+  borderRadius?: number | string;
 }
 
 // Component define props
