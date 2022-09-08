@@ -2,32 +2,16 @@
 <script setup lang="ts">
 // Component interface
 interface ICardCotnainerProps {
-  boxShadow?: boolean;
+  boxShadow?: string;
   backgroundColor?: string;
-  borderRadius?: number | string;
+  borderRadius?: string | number;
 }
 
 // Component define props
 const props = withDefaults(defineProps<ICardCotnainerProps>(), {
-  boxShadow: true,
+  boxShadow: "0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06)",
   backgroundColor: "white",
   borderRadius: "0.5rem",
-});
-
-// Computed handle
-const boxShadowStyleValue = computed(() => {
-  const SHADOW_VALUE = "0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06)";
-  if (!props.boxShadow) {
-    return "none";
-  }
-  return SHADOW_VALUE;
-});
-
-const borderRadiusStyleValue = computed(() => {
-  if (typeof props.borderRadius === "number") {
-    return `${props.borderRadius}px`;
-  }
-  return props.borderRadius;
 });
 </script>
 
@@ -41,8 +25,8 @@ const borderRadiusStyleValue = computed(() => {
 <!-- Scoped style -->
 <style lang="scss" scoped>
 .card-container {
-  border-radius: v-bind(borderRadiusStyleValue);
+  border-radius: v-bind("typeof props.borderRadius === 'number' ? `${props.borderRadius}px` : props.borderRadius");
   background-color: v-bind("props.backgroundColor");
-  box-shadow: v-bind(boxShadowStyleValue);
+  box-shadow: v-bind("props.boxShadow");
 }
 </style>

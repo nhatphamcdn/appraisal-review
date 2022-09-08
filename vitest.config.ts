@@ -36,7 +36,7 @@ export default {
       lines: 90,
       functions: 90,
       branches: 90,
-      all: true,
+      reporter: ["text", "json", "html"],
       include: ["assets", "components", "composables", "layouts", "middleware", "pages", "public", "app.vue"],
       exclude: ["**/*.story.vue", "**/*.test.ts", "app.vue", "pages/**/*.vue"],
     },
