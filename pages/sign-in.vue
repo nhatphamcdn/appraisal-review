@@ -11,7 +11,7 @@ definePageMeta({
   <div class="row justify-content-center">
     <div class="col-12 col-sm-8 col-md-7">
       <CardContainer class="pt-4 text-center">
-        <div class="pb-4 card-body">
+        <div class="p-4 pt-0 card-body">
           <h3>Sign in to your account</h3>
           <form class="pt-3 pt-md-4">
             <button class="p-3">
