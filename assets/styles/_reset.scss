@@ -11,4 +11,14 @@ input[type="button"],
     --#{$prefix}btn-border-color: #{rgba($dark, 0.85)};
     --#{$prefix}btn-box-shadow: 1px 2px 3px #{rgba($dark, 0.25)};
   }
+
+  .icon {
+    &-left {
+      margin-right: 0.5rem;
+    }
+
+    &-right {
+      margin-left: 0.5rem;
+    }
+  }
 }

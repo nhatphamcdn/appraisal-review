@@ -1,0 +1,3 @@
+// Vitest Snapshot v1
+
+exports[`CardContainer > mounts and is still the same 1`] = `"<div class=\\"card-container\\" data-v-abe41d01=\\"\\"></div>"`;

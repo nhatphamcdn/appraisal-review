@@ -1,5 +1,5 @@
-// Card heading text
 .card-container {
+  // Card heading text
   h3 {
     font-size: 1.25rem;
     font-weight: 700;
@@ -11,6 +11,7 @@
     }
   }
 
+  // Card body
   .card-body {
     display: flex;
     flex-direction: column;
@@ -21,6 +22,12 @@
     }
   }
 
+  // Card footer
+  .card-footer {
+    background: rgb(0 0 0 / 3%);
+  }
+
+  // Card form
   form {
     button {
       display: flex;
@@ -30,21 +37,11 @@
       font-size: 1rem;
       font-weight: 600;
 
-      .icon {
-        &-left {
-          margin-right: 0.5rem;
-        }
-      }
-
       @include media-breakpoint-up("md") {
         font-size: 1.25rem;
         max-width: 75%;
         margin: auto;
       }
     }
-  }
-
-  .card-footer {
-    background: rgb(0 0 0 / 3%);
   }
 }
