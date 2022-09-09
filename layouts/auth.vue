@@ -4,7 +4,7 @@ import Logo from "assets/images/themes/logo.svg";
 
 <!-- DOM Render -->
 <template>
-  <main class="auth-layout">
+  <main class="auth-layout p-4">
     <header class="text-center">
       <h1>
         <Logo />
@@ -22,5 +22,8 @@ import Logo from "assets/images/themes/logo.svg";
 <style lang="scss" scoped>
 .auth-layout {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 </style>

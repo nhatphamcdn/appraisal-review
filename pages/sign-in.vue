@@ -22,3 +22,10 @@ definePageMeta({
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+@import "assets/styles/components/card-container";
+// @include media-breakpoint-up("md") {
+//   font-size: 1.5rem;
+// }
+</style>

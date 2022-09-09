@@ -1,0 +1,10 @@
+// Card heading text
+.card-container {
+  h3 {
+    font-size: 1.25rem;
+    color: $dark;
+    @include media-breakpoint-up("md") {
+      font-size: 1.5rem;
+    }
+  }
+}
