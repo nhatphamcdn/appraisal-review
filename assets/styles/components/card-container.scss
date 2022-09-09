@@ -2,9 +2,49 @@
 .card-container {
   h3 {
     font-size: 1.25rem;
-    color: $dark;
+    font-weight: 700;
+    --fs-typography-spacing-vertical: 1rem;
+
     @include media-breakpoint-up("md") {
       font-size: 1.5rem;
+      font-weight: 900;
     }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media-breakpoint-up("md") {
+      min-height: 16rem;
+    }
+  }
+
+  form {
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 600;
+
+      .icon {
+        &-left {
+          margin-right: 0.5rem;
+        }
+      }
+
+      @include media-breakpoint-up("md") {
+        font-size: 1.25rem;
+        max-width: 75%;
+        margin: auto;
+      }
+    }
+  }
+
+  .card-footer {
+    background: rgb(0 0 0 / 3%);
   }
 }

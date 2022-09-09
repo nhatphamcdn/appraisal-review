@@ -13,7 +13,7 @@ import Logo from "assets/images/themes/logo.svg";
     <section class="container">
       <slot />
     </section>
-    <footer class="text-center">
+    <footer class="text-center mt-5">
       &copy; 2022 <a href="https://nhatphamcdn.xyz" target="_blank">nhatphamcdn.xyz</a>
     </footer>
   </main>
@@ -24,6 +24,13 @@ import Logo from "assets/images/themes/logo.svg";
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+
+  header {
+    margin-bottom: 1.5rem;
+    @include media-breakpoint-up("lg") {
+      margin-bottom: 3rem;
+    }
+  }
 }
 </style>

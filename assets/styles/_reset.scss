@@ -1,0 +1,14 @@
+button,
+input[type="submit"],
+input[type="button"],
+[role="button"] {
+  --#{$prefix}btn-border-color: #{$dark};
+  --#{$prefix}background-color: #{$dark};
+  --#{$prefix}btn-color: white;
+
+  &:is([aria-current], :hover, :active, :focus) {
+    --#{$prefix}background-color: #{rgba($dark, 0.85)};
+    --#{$prefix}btn-border-color: #{rgba($dark, 0.85)};
+    --#{$prefix}btn-box-shadow: 1px 2px 3px #{rgba($dark, 0.25)};
+  }
+}

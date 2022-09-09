@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import GoogleIcon from "assets/images/themes/icons/google.svg";
 definePageMeta({
   layout: "auth",
   layoutTransition: false,
@@ -8,15 +9,19 @@ definePageMeta({
 
 <template>
   <div class="row justify-content-center">
-    <div class="col-12 col-sm-8 col-md-6">
-      <CardContainer class="pt-2">
-        <div class="w-100 text-center">
-          <div class="mb-4 mt-md-0">
-            <h3>Sign in to your account</h3>
-          </div>
-          <form class="mt-4">
-            <button>Login With Google</button>
+    <div class="col-12 col-sm-8 col-md-7">
+      <CardContainer class="pt-4 text-center">
+        <div class="pb-4 card-body">
+          <h3>Sign in to your account</h3>
+          <form class="p-3 p-md-4">
+            <button class="p-3">
+              <GoogleIcon class="icon-left" />
+              Login With Google
+            </button>
           </form>
+        </div>
+        <div class="card-footer p-4">
+          <div>Don't have access to your account? <a href="#" class="text-dark">Contact Administrator</a>.</div>
         </div>
       </CardContainer>
     </div>
@@ -24,8 +29,5 @@ definePageMeta({
 </template>
 
 <style lang="scss" scoped>
-@import "assets/styles/components/card-container";
-// @include media-breakpoint-up("md") {
-//   font-size: 1.5rem;
-// }
+@import "assets/styles/components/card-container.scss";
 </style>
