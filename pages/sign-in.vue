@@ -13,7 +13,7 @@ definePageMeta({
       <CardContainer class="pt-4 text-center">
         <div class="pb-4 card-body">
           <h3>Sign in to your account</h3>
-          <form class="p-3 p-md-4">
+          <form class="pt-3 pt-md-4">
             <button class="p-3">
               <GoogleIcon class="icon-left" />
               Login With Google
