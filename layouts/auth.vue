@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import Logo from "assets/images/themes/logo.svg";
-</script>
+<script setup lang="ts"></script>
 
 <!-- DOM Render -->
 <template>
