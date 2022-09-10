@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { sidebarItems } from "@/constance/sidebar.constance";
-
-console.log(sidebarItems);
 </script>
 
 <template>

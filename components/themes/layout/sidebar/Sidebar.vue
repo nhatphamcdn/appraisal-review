@@ -6,8 +6,6 @@ const props = withDefaults(defineProps<ISidebarProps>(), {
   width: 240,
   backgroundColor: "#081131",
 });
-
-console.log(props);
 </script>
 
 <!-- Template render -->
