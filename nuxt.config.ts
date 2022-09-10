@@ -1,5 +1,6 @@
 import { defineNuxtConfig } from "nuxt";
 import svgLoader from "vite-svg-loader";
+import VueTypeImports from "vite-plugin-vue-type-imports";
 
 export default defineNuxtConfig({
   css: ["@/assets/styles/app.scss"],
@@ -10,7 +11,7 @@ export default defineNuxtConfig({
         usePolling: true,
       },
     },
-    plugins: [svgLoader()],
+    plugins: [svgLoader(), VueTypeImports()],
     css: {
       preprocessorOptions: {
         scss: {

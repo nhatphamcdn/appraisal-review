@@ -2,6 +2,10 @@ $fm-primary: "Montserrat", sans-serif;
 $dark: #081131;
 $hot-pink: #f81894;
 $hot-pink-hover: #ff69b4;
+$contrast: rgb(0 0 0 / 3%);
+$contrast-highest: rgb(0 0 0 / 7%);
+
+$primary: $hot-pink;
 
 :root {
   --fs-font-family: #{$fm-primary};
