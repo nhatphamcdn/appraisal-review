@@ -1,0 +1,21 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 0 16px 24px;
+  color: #fff;
+
+  .logo {
+    display: block;
+    max-width: 50%;
+  }
+
+  a {
+    color: white;
+
+    &:is([aria-current], :hover, :active, :focus) {
+      color: $primary;
+    }
+  }
+}

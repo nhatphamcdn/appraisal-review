@@ -1,5 +1,18 @@
+<script setup lang="ts">
+import { sidebarItems } from "@/constance/sidebar.constance";
+</script>
+
 <template>
-  <div>
-    <slot />
+  <div class="default-layout">
+    <Sidebar :items="sidebarItems" />
+    <div>
+      <slot />
+    </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.default-layout {
+  padding-left: 240px;
+}
+</style>
