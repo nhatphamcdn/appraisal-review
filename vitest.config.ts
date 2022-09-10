@@ -3,6 +3,7 @@
 import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
+import VueTypeImports from "vite-plugin-vue-type-imports";
 
 const rq = (p: string) => resolve(__dirname, p);
 
@@ -26,6 +27,7 @@ export default {
       dts: "@types/auto-imports.d.ts",
       vueTemplate: true,
     }),
+    VueTypeImports(),
   ],
   root: ".",
   test: {

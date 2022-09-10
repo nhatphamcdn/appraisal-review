@@ -17,19 +17,7 @@ const props = withDefaults(defineProps<ISidebarProps>(), {
       </div>
       <div class="sidebar-body">
         <template v-if="props.items.length">
-          <SidebarGroupItem
-            v-for="sidebarItem in props.items"
-            :key="sidebarItem.name"
-            :group-item="sidebarItem"
-          ></SidebarGroupItem>
-          <!-- <div v-for="sidebarItem in props.items" :key="sidebarItem.name">
-            <template v-if="sidebarItem.children && sidebarItem.children.length">
-              <div>
-                {{ sidebarItem.name }}
-              </div>
-            </template>
-            <NuxtLink v-else :to="sidebarItem.link">{{ sidebarItem.name }}</NuxtLink>
-          </div> -->
+          <SidebarGroupItem v-for="sidebarItem in props.items" :key="sidebarItem.name" :group-item="sidebarItem" />
         </template>
       </div>
     </div>

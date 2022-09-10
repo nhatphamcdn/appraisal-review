@@ -5,6 +5,8 @@ const NuxtStubs = {
   NuxtLink: true,
   Head: true,
   Title: true,
+  Logo: true,
+  SidebarGroupItem: true,
 };
 
 const renderNuxtStubbed = (TestComponent: any, options?: RenderOptions): RenderResult => {
