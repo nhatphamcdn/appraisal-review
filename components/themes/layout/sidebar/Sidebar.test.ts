@@ -18,7 +18,7 @@ describe("Sidebar Component with sidebarItems", () => {
     expect(container.querySelector(".logo")).not.toBeNull();
   });
 
-  test("Menu item should be exist", () => {
+  test("Menu item should be exist and correct length parent items is: " + sidebarItems.length, () => {
     const { container } = render(Sidebar, {
       props: {
         items: sidebarItems,
@@ -26,5 +26,6 @@ describe("Sidebar Component with sidebarItems", () => {
     });
 
     expect(container.querySelector("sidebar-group-item-stub")).not.toBeNull();
+    expect(container.querySelectorAll("sidebar-group-item-stub").length).toEqual(sidebarItems.length);
   });
 });
