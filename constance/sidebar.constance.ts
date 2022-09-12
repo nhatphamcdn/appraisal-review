@@ -6,12 +6,12 @@ export const sidebarItems: SidebarItem[] = [
     link: "/",
   },
   {
-    id: "group-test",
-    name: "Group Test",
+    id: "settings",
+    name: "Settings",
     children: [
       {
-        name: "Dashboardssss",
-        link: "/#",
+        name: "360 Templates",
+        link: "/settings/templates",
       },
     ],
   },

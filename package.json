@@ -66,5 +66,8 @@
     "*.{scss, css, md}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "vue-draggable-next": "^2.1.1"
   }
 }
