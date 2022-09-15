@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import DragHandle from "assets/images/themes/icons/drag-handle.svg";
+
 interface myArrayList {
   id: number;
   name: string;
@@ -20,6 +22,18 @@ const myArray = ref<myArrayList[]>([
     id: 3,
     name: "Testing 3",
   },
+  {
+    id: 4,
+    name: "Testing 2",
+  },
+  {
+    id: 5,
+    name: "Testing 4",
+  },
+  {
+    id: 6,
+    name: "Testing 3",
+  },
 ]);
 
 const isDragging = ref<boolean>(false);
@@ -33,9 +47,6 @@ watch(
   },
   { deep: true },
 );
-watch(isDragging, (v) => {
-  console.log(v);
-});
 
 const dragOptions = computed(() => {
   return {
@@ -66,8 +77,14 @@ const dragOptions = computed(() => {
       >
         <template #item="{ element }">
           <li class="list-group-item">
-            <i class="handle" @click="isDragging = true">ICON</i>
-            <Editor v-model="element.name" :editable="!isDragging" />
+            <div class="d-flex">
+              <ClientOnly>
+                <i class="handle">
+                  <DragHandle />
+                </i>
+              </ClientOnly>
+              <Editor v-model="element.name" :editable="!isDragging" />
+            </div>
           </li>
         </template>
       </draggable>
@@ -75,19 +92,21 @@ const dragOptions = computed(() => {
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .ghost {
   opacity: 0.5;
-  background: #c8ebfb;
+  background: #fbe0fd;
+  border-radius: $borderRadius;
 }
 .list-group {
   min-height: 20px;
 }
 .handle {
   cursor: grab;
+  margin-right: 1rem;
+  padding: 5px;
 }
 .list-group-item {
-  background: #ccc;
   margin: 0.5rem 0;
   padding: 0.5rem;
 }

@@ -65,6 +65,12 @@ const buttons = ref<IAction[]>([
     action: () => props.editor.commands.toggleBlockquote(),
   },
   {
+    name: "link",
+    label: "Link",
+    icon: "link",
+    action: () => setLink(),
+  },
+  {
     name: "code",
     label: "Code",
     icon: "code",
@@ -91,6 +97,26 @@ const buttons = ref<IAction[]>([
 ]);
 
 const { getImageUrl } = useAssetImage();
+
+const setLink = () => {
+  const previousUrl = props.editor.getAttributes("link").href;
+  const url = window.prompt("URL", previousUrl);
+
+  // cancelled
+  if (url === null) {
+    return;
+  }
+
+  // empty
+  if (url === "") {
+    props.editor.chain().focus().extendMarkRange("link").unsetLink().run();
+
+    return;
+  }
+
+  // update link
+  props.editor.chain().focus().extendMarkRange("link").setLink({ href: url }).run();
+};
 </script>
 
 <template>
@@ -119,7 +145,7 @@ const { getImageUrl } = useAssetImage();
 <style lang="scss" scoped>
 .toolbar {
   opacity: 0;
-  visibility: hidden;
+  min-height: 0;
   transition: all 0.25s ease-in-out;
   display: flex;
   gap: 0.25rem;
@@ -143,7 +169,6 @@ button {
 
   &.is-active {
     background-color: rgba(#ff69b4, 0.25);
-    color: white;
   }
 }
 </style>

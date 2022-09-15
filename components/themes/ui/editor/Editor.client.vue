@@ -9,6 +9,7 @@
 import { useEditor, EditorContent } from "@tiptap/vue-3";
 import StarterKit from "@tiptap/starter-kit";
 import Underline from "@tiptap/extension-underline";
+import Link from "@tiptap/extension-link";
 
 interface IEditorProps {
   editable?: boolean;
@@ -25,7 +26,7 @@ const emit = defineEmits(["update:modelValue"]);
 
 const editor = useEditor({
   content: props.modelValue,
-  extensions: [StarterKit, Underline],
+  extensions: [StarterKit, Underline, Link],
   editable: props.editable,
   autofocus: props.autofocus,
   onUpdate: ({ editor }) => {
