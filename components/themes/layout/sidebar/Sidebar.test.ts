@@ -1,6 +1,6 @@
 import { describe, test, expect } from "vitest";
 import Sidebar from "./Sidebar.vue";
-import { render } from "~~/tests/testing-library-vue";
+import { render } from "@/tests/testing-library-vue";
 import { sidebarItems } from "@/constance/sidebar.constance";
 
 describe("Sidebar Component with sidebarItems", () => {
