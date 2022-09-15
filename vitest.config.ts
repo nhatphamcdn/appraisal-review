@@ -42,6 +42,6 @@ export default {
       include: ["assets", "components", "composables", "layouts", "middleware", "pages", "public", "app.vue"],
       exclude: ["**/*.story.vue", "**/*.test.ts", "app.vue", "pages/**/*.vue"],
     },
-    setupFiles: ["./tests/setupTest.ts"],
+    setupFiles: ["./tests/setup-test.ts"],
   },
 };
