@@ -5,7 +5,7 @@ import { sidebarItems } from "@/constance/sidebar.constance";
 <template>
   <div class="default-layout">
     <Sidebar :items="sidebarItems" />
-    <div>
+    <div class="container-fluid">
       <slot />
     </div>
   </div>

@@ -1,0 +1,58 @@
+.editor {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: $borderRadius;
+  transition: all 0.25s ease-in-out;
+  box-shadow: none;
+
+  ul,
+  ol {
+    padding-left: 1rem;
+  }
+
+  .ProseMirror {
+    font-size: 1rem;
+    color: $dark;
+    outline: none;
+    min-height: 5rem;
+    transition: all 0.25s ease-in-out;
+
+    p {
+      --fs-typography-spacing-vertical: 0.25rem;
+      margin-top: var(--fs-typography-spacing-vertical);
+    }
+
+    .is-editor-empty::before,
+    .is-empty::before {
+      content: attr(data-placeholder);
+      float: left;
+      color: #ced4da;
+      pointer-events: none;
+      height: 0;
+    }
+  }
+
+  &:not(.disabled):hover,
+  &:not(.disabled):active,
+  &:not(.disabled):focus {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    // min-height: 15rem;
+  }
+
+  &.disabled .ProseMirror {
+    pointer-events: none;
+  }
+
+  &:not(.disabled):hover .toolbar {
+    height: auto;
+    min-height: auto;
+    opacity: 1;
+  }
+  &:not(.disabled):hover .ProseMirror {
+    cursor: text;
+    padding: 1rem 0;
+  }
+}
