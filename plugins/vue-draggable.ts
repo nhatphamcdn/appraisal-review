@@ -1,5 +1,5 @@
-import { VueDraggableNext } from "vue-draggable-next";
+import draggableComponent from "vuedraggable";
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.component("draggable", VueDraggableNext);
+  nuxtApp.vueApp.component("draggable", draggableComponent);
 });

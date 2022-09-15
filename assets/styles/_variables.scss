@@ -6,6 +6,8 @@ $contrast: rgb(0 0 0 / 3%);
 $contrast-highest: rgb(0 0 0 / 7%);
 
 $primary: $hot-pink;
+$borderRadius: 0.35rem;
+$baseTimeTransition: 0.25s;
 
 :root {
   --fs-font-family: #{$fm-primary};

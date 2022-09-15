@@ -22,7 +22,7 @@ export default defineNuxtConfig({
             "Montserrat",
             {
               name: "Montserrat",
-              styles: "ital,wght@0,200;0,400;0,500;0,600;0,700;0,900;1,400",
+              styles: "ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,900;1,400",
               defer: true,
             },
           ],
@@ -49,6 +49,10 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  modules: ["@nuxt/image-edge"],
+  image: {
+    dir: "assets/images",
+  },
   typescript: {
     shim: false,
     strict: true,
